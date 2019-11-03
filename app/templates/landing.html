@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="jumbotron">
+        <h1 class="display-4">Summary: Latitude vs. X</h1>
+        <p class="lead">Kadar Amek </p>
+        <hr class="my-4">
+        <p align='right'> <img src="{{ url_for('static', filename='img/landing.png') }}" alt="" width="200" height="200" align="left"> This purpose of this website is to analyze wheather changes as we get closer to the equator. To accomplish this analysis, I first analyzed cities.csv data to assemble a dataset on over 500 cities. After assembling the dataset, I used Matplotlib to plot various aspects of the weather vs. latitude. Factors I looked at included: 1. temperature, 2. cloudiness, 3. wind speed, 4. and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed. </p>
+</div>
+{% endblock %}
+
+
+
