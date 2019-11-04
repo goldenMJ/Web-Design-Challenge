@@ -1,5 +1,9 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template
+import pandas as pd 
+import os
+import csv
+
 
 # create the application object
 app = Flask(__name__)
@@ -15,8 +19,11 @@ def Comparison():
     return render_template('comparison.html') 
 
 @app.route('/Data')
-def Data():
-    return render_template('Data.html') 
+def Data(): 
+    data = pd.read_csv('/Users/seve/Desktop/Web-Design-Challenge/Resources/cities.csv')
+    table = data.to_html
+    return render_template('Data.html',tables=table)
+
 
 # start the server with the 'run()' method
 if __name__ == '__main__':
