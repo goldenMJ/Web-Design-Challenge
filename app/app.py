@@ -1,5 +1,6 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template
+import pandas as pd
 
 # create the application object
 app = Flask(__name__)
