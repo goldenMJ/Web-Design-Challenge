@@ -1,34 +1,22 @@
 # import the Flask class from the flask module
 from flask import Flask, render_template
-import pandas as pd
 
 # create the application object
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/welcome')
-@app.route('/home')
-def welcome():
+@app.route('/about')
+def about():
     return render_template('home.html')  # render a template
 
 
-@app.route('/login')
-def login():
-    return render_template('login.html')  
+@app.route('/Comparison')
+def Comparison():
+    return render_template('comparison.html') 
 
-@app.route('/register')
-def register():
-    return render_template('home.html') 
-
-@app.route('/about')
-def about():
-    return render_template('about.html') 
-
-
-@app.route("/logout")
-def logout():
-    session['logged_in'] = False
-    return home()
+@app.route('/Data')
+def Data():
+    return render_template('Data.html') 
 
 # start the server with the 'run()' method
 if __name__ == '__main__':
