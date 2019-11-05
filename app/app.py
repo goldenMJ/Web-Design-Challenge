@@ -18,6 +18,8 @@ def about():
 def Comparison():
     return render_template('comparison.html') 
 
+
+
 @app.route('/Data')
 def Data(): 
     data = pd.read_csv('/Users/seve/Desktop/Web-Design-Challenge/Resources/cities.csv')
