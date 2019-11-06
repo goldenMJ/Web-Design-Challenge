@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+<div class="jumbotron">
+        <h1 class="display-4">Comparison: Lattitude vs. X</h1>
+        <div class="jumbotron">
+                <p class="lead">Kadar Amek </p>
+                <hr class="my-4">
+                <p align='right'> <img src="{{ url_for('static', filename='img/Fig1.png') }}" class="rounded mx-auto d-block" alt="" width="" height="" align="center"></p>
+                <br> As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg.Latitude).
+                <br> More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of the year than the northern hemisphere.
+                <br> This may be due to the tilt of the earth at the time of the year this data was gathered.
+        </div>
+</div>
+{% endblock %}
+
+
+
+
+
+ 
