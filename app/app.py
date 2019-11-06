@@ -9,7 +9,6 @@ import csv
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/about')
 def about():
     return render_template('home.html')  # render a template
 
@@ -22,6 +21,12 @@ def Comparison():
 
 @app.route('/Data')
 def Data(): 
+    data = pd.read_csv('/Users/seve/Desktop/Web-Design-Challenge/Resources/cities.csv')
+    table = data.to_html
+    return render_template('Data.html',tables=table)
+
+@app.route('/action')
+def action(): 
     data = pd.read_csv('/Users/seve/Desktop/Web-Design-Challenge/Resources/cities.csv')
     table = data.to_html
     return render_template('Data.html',tables=table)
